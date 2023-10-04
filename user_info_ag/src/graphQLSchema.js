@@ -48,8 +48,8 @@ import pacienteResolvers from './resolvers/pacienteResolvers';
 // Merge de los typeDefs
 
 const mergedTypeDefs = mergeSchemas(
-  ['scalar JSON'],
-  [paisTypeDefs, tipoDocumentoTypeDefs, personaTypeDefs, doctorTypeDefs, pacienteTypeDefs],
+  ['scalar JSON'
+  ,paisTypeDefs, tipoDocumentoTypeDefs, personaTypeDefs, doctorTypeDefs, pacienteTypeDefs],
   [paisQueries, tipoDocumentoQueries, personaQueries, doctorQueries, pacienteQueries],
   [paisMutations, tipoDocumentoMutations, personaMutations, doctorMutations, pacienteMutations],
 );

@@ -9,9 +9,9 @@ const personaResolvers = {
     getPersona: (_, { id }) => generalRequest(`${URL}/${id}`, 'GET'),
   },
   Mutation: {
-    createPersona: (_, { input }) => postRequest(URL, 'POST', input),
-    updatePersona: (_, { id, input }) => putRequest(`${URL}/${id}`, 'PUT', input),
-    deletePersona: (_, { id }) => deleteRequest(`${URL}/${id}`, 'DELETE'),
+    createPersona: (_, { input }) => generalRequest(URL, 'POST', input),
+    updatePersona: (_, { id, input }) => generalRequest(`${URL}/${id}`, 'PUT', input),
+    deletePersona: (_, { id }) => generalRequest(`${URL}/${id}`, 'DELETE'),
   },
 };
 
