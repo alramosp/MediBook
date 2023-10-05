@@ -14,9 +14,9 @@ import {
 import paisResolvers from './resolvers/paisResolvers';
 
 import {
-  tipoDocumentoMutations,
+  tipoDocumentoTypeDefs,
   tipoDocumentoQueries,
-  tipoDocumentoTypeDefs
+  tipoDocumentoMutations
 } from './typeDefs/DocumentoTypeDefs';
 
 import tipoDocumentoResolvers from './resolvers/DocumentoResolvers';

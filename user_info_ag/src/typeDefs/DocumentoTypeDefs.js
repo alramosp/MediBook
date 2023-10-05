@@ -13,11 +13,10 @@ export const tipoDocumentoTypeDefs = `
 export const tipoDocumentoQueries = `
     getTiposDocumentos: [TipoDocumento]!
     getTipoDocumento(id: ID!): TipoDocumento
-  }`;
+  `;
 
 export const tipoDocumentoMutations = `
     createTipoDocumento(tipoDocumento: TipoDocumentoInput!): TipoDocumento
     updateTipoDocumento(id: ID!, tipoDocumento: TipoDocumentoInput!): TipoDocumento
     deleteTipoDocumento(id: ID!): ID
-  }
 `;

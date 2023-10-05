@@ -24,10 +24,10 @@ export const personaTypeDefs = `
 export const personaQueries = `
     getPersonas: [Persona]!
     getPersona(id: ID!): Persona      
-  }`;
+  `;
 
 export const personaMutations = `
-  createPersona(input: PersonaInput!): Persona
-  updatePersona(id: ID!, input: PersonaInput!): Persona
+  createPersona(persona: PersonaInput!): Persona
+  updatePersona(id: ID!, persona: PersonaInput!): Persona
   deletePersona(id: ID!): ID
-  }`;
+  `;

@@ -15,11 +15,10 @@ export const doctorTypeDefs = `
   export const doctorQueries = `
     getDoctores: [Doctor]!
     getDoctor(id: ID!): Doctor
-  }`;
+  `;
 
   export const doctorMutations = `
-    createDoctor(input: DoctorInput!): Doctor
-    updateDoctor(id: ID!, input: DoctorInput!): Doctor
+    createDoctor(doctor: DoctorInput!): Doctor
+    updateDoctor(id: ID!, doctor: DoctorInput!): Doctor
     deleteDoctor(id: ID!): ID
-  }
 `;

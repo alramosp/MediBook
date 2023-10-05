@@ -13,11 +13,10 @@ export const pacienteTypeDefs = `
   export const pacienteQueries = `
     getPacientes: [Paciente]!
     getPaciente(id: ID!): Paciente
-  }`;
+  `;
 
   export const pacienteMutations = `
-    createPaciente(input: PacienteInput!): Paciente
-    updatePaciente(id: ID!, input: PacienteInput!): Paciente
+    createPaciente(paciente: PacienteInput!): Paciente
+    updatePaciente(id: ID!, paciente: PacienteInput!): Paciente
     deletePaciente(id: ID!): ID
-  }
 `;
