@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: medibook-user-info-db
+  labels:
+    app: medibook-user-info-db
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: medibook-user-info-db
+  template:
+    metadata:
+      labels:
+        app: medibook-user-info-db
+    spec:
+      containers:
+      - name: medibook-user-info-db
+        image: us-central1-docker.pkg.dev/medibook-401122/swarch-medibook-repo/medibook-user_info-bd:v01
+        ports:
+        - containerPort: 3306

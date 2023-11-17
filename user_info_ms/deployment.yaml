@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: medibook-user-info-ms
+  labels:
+    app: medibook-user-info-ms
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: medibook-user-info-ms
+  template:
+    metadata:
+      labels:
+        app: medibook-user-info-ms
+    spec:
+      containers:
+      - name: medibook-user-info-ms
+        image: us-central1-docker.pkg.dev/medibook-401122/swarch-medibook-repo/medibook-user_info-ms:v01
+        ports:
+        - containerPort: 4001
